@@ -6,6 +6,14 @@
         <entry key="..\:/Users/kirik/AndroidStudioProjects/SimpleAppForEspresso/app/src/main/res/layout/content_main.xml" value="0.296195652173913" />
         <entry key="..\:/Users/kirik/AndroidStudioProjects/SimpleAppForEspresso/app/src/main/res/layout/fragment_gallery.xml" value="0.17603850050658562" />
         <entry key="..\:/Users/kirik/AndroidStudioProjects/SimpleAppForEspresso/app/src/main/res/layout/list_item.xml" value="0.17603850050658562" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.28943176269531257" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.20574340820312498" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.19655797101449277" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.19655797101449277" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.19655797101449277" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.19655797101449277" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.19655797101449277" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.19655797101449277" />
       </map>
     </option>
   </component>
