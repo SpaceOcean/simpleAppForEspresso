@@ -16,6 +16,7 @@ import android.content.Intent;
 import android.view.View;
 
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.test.espresso.IdlingRegistry;
 import androidx.test.espresso.NoMatchingViewException;
 import androidx.test.espresso.ViewAssertion;
 import androidx.test.espresso.intent.Intents;
@@ -28,6 +29,8 @@ import androidx.test.rule.ActivityTestRule;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -46,9 +49,10 @@ import static org.junit.Assert.*;
 
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
-
-
-
+    @Before //Выполняется перед тестами
+    public void registerIdlingResources() { //Подключаемся к “счетчику”
+            IdlingRegistry.getInstance().register(EspressoIdlingResources.idlingResource);
+    }
 
 
     @Rule
@@ -118,5 +122,10 @@ public class ExampleInstrumentedTest {
         ViewInteraction recyclerView = onView(withId(R.id.recycle_view));
         recyclerView.check(CustomViewAssertions.isRecyclerView());
         recyclerView.check(matches(CustomViewMatcher.recyclerViewSizeMatcher(10)));
+    }
+
+    @After // Выполняется после тестов
+    public void unregisterIdlingResources() { //Отключаемся от “счетчика”
+        IdlingRegistry.getInstance().unregister(EspressoIdlingResources.idlingResource);
     }
 }
