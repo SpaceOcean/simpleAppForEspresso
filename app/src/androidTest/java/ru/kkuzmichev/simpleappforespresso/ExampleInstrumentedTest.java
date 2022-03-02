@@ -122,6 +122,9 @@ public class ExampleInstrumentedTest {
         ViewInteraction recyclerView = onView(withId(R.id.recycle_view));
         recyclerView.check(CustomViewAssertions.isRecyclerView());
         recyclerView.check(matches(CustomViewMatcher.recyclerViewSizeMatcher(10)));
+        
+        ViewInteraction itemInRecyclerView = onView(allOf(withId(R.id.item_number), withText("1")));
+        itemInRecyclerView.check(matches(isDisplayed()));
     }
 
     @After // Выполняется после тестов
